@@ -1,0 +1,22 @@
+First subject<input id=t1 /> <br>
+Secon subject<input id=t2 /> <br>
+Third subject<input id=t3 /> <br>
+Fourth subject<input id=t4 /> <br>
+Fifth subject<input id=t5 /> <br>
+
+<input type=button value=Result onclick="xyz()" /> <br>
+<output id=out1 />
+<script>
+function xyz()
+{
+a=parseInt(t1.value);
+b=parseInt(t2.value);
+c=parseInt(t3.value);
+d=parseInt(t4.value);
+e=parseInt(t5.value);
+g=a+b+c+d+e;
+f=g/5;
+out1.value='Total Marks out of 500    :      ' + g +
+'                 Percentage    :   '+ f
+}
+</script> 
