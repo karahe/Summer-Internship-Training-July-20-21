@@ -1,0 +1,29 @@
+<a href=register.html > Register </a> |
+<br><br>
+<table border="0">
+<tr><th colspan="2"> Registration form </th> </tr>
+<tr> <td> User Id </td> <td> <input id=userid > </td> </tr>
+<tr> <td> Name </td> <td> <input id=name > </td> </tr>
+<tr> <td> Password </td><td> <input type="password" id=password ></td></tr>
+<tr> <td>  Email Id</td> <td> <input id=emailid > </td> </tr>
+<tr> <td> Contact </td> <td> <input id=contact > </td> </tr>
+<tr> <td> Address</td> <td> <input id=address > </td> </tr>
+<tr> <td> Date of Birth</td> <td> <input type=date id =t1> </td> </tr>
+<tr> <td> Country</td> <td><select id=t2> <option value = India> India </option> </select>
+</td> </tr>
+<tr> <td> </td> <td> <input type="button" value="Register" onclick="show()" ></td></tr>
+<p id=p1></p>
+</table>
+<script>
+function show()
+{
+a=userid.value
+b=name.value
+c=password.value
+d=emailid.value
+e=contact.value
+f=address.value
+g=t1.value
+h=t2.value
+p1.innerHTML=   " User Id  :  "+ a + "  ,  Name  :  " + b +  "  ,  Password  :  " + c + "  ,  Email Id  :  " + d + "  ,  Contact  :   " +e+ "  ,   Address   :   " + f + "   ,  Date of Birth  :  " + g + "   ,  Country  :  "  + h}
+</script>
