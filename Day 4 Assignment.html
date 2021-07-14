@@ -1,0 +1,21 @@
+
+<style>
+.screen { height:40px; width:10px; font-size:20;text-align:right }
+.btn { height:40px; width:300px; font-size:20; color:blue; }
+</style>
+<center><table border="0">
+<tr><td>First No. </td><td> Second No. </td><td> Third No. </td></tr>
+<tr><td>
+ <input id="t1" class=screen/></td><td><input id="t2" class=screen/>
+</td><td><input id="t3" class=screen/></td></tr>
+</table></centre><br><br><input type="button" value="Greatest Number" class=btn onclick="abc()" /><br><br>
+<output id=out1 />
+</center> 
+<script>
+function abc()
+{ a=parseInt(t1.value); b=parseInt(t2.value); c=parseInt(t3.value); 
+if(a>b && a>c) x=a; 
+else if(b>a && b>c) x=b;
+else x=c;
+out1.value='Greatest Number : '+x}
+</script>
