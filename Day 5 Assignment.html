@@ -1,0 +1,54 @@
+<a href=register.html > Register </a> |
+<a href=Confirmation.html > Confirmation Page </a> |
+<label for="start"></label>
+<br><br>
+<table border="0">
+<form name=f1 action=contact.html onsubmit="return xyz()">
+<tr><th colspan="2"> Registration form </th> </tr>
+<tr> <td> User Id </td> <td><input required pattern="\w{1,20}"></td> </tr>
+<tr> <td> Name </td> <td> <input required pattern="[a-zA-Z ]{1,20}"> </td> </tr>
+<tr> <td> Password </td><td> <input type="password" id=password required></td></tr>
+
+<tr> <td>  Email Id</td> <td> <input required = email >  </td> </tr>
+
+<tr> <td> Contact </td> <td> <input required pattern="[0-9]{10,12}"> </td> </tr>
+
+<tr> <td> Address</td> <td> <input required></td> </tr>
+
+<tr> <td> Date of Birth</td> <td> <input required type="date" id="start" name="trip-start"
+       value="2000-03-23"
+       min="2000-01-01" max="2010-12-31"></td> </tr>
+
+<tr> <td> Country</td> <td><select required> <option value = India> India </option> <option value = China> China </option> <option value = Russia> Russia </option> <option value = Brazil> Brazil </option> 
+</select>
+</td> </tr>
+<tr> <td> </td> <td> <input type=submit value=Register /></td></tr>
+</form>
+</table>
+<br>
+<span id=s1 class=red></span>
+
+<script>
+function xyz()
+{
+f=true
+a=password.value
+c=0
+if(a.match(/[A-Z]/))
+c=c+1
+if(a.match(/[a-z]/))
+c=c+1
+if(a.match(/[0-9]/))
+c=c+1
+if(a.match(/\W/))
+c=c+1
+if(a.length>7)
+c=c+1
+alert("Strong Password is Required to Register")
+if(c<5)
+f=false
+return f
+}
+</script>
+
+
