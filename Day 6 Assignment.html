@@ -1,0 +1,210 @@
+<style>.navbar { list-style-type:none;height:100%;width:60%; background-color:green;}
+.nav-list {  padding: 3%;font-size:30px;color:white}
+.nav-list:hover { background-color: blue; color:orange}
+.link { text-decoration:none ; color:white }
+</style>
+<ul class=navbar>
+<li class=nav-list> <a class=link href="#home.html">  Home </a> </li>
+<li class=nav-list><a  class=link href="#about.html"> About </a></li>
+<li class=nav-list> <a class=link  href="#contact.html">Contact </a></li>
+<li class=nav-list> <a  class=link href="#register.html">Register </a></li>
+<li class=nav-list> <a  class=link href="#login.html">Login </a></li>
+<li class=nav-list> <a  class=link href="#show.html">Show </a></li>
+</ul><a name = "home.html">
+<style>
+.abc { color:black;font-size:30 }
+.xyz { color:blue;font-size:35 }
+</style>
+<p id=p1 class=abc onmouseover=a1() onmouseout=a2()> Contact </p>
+<script>
+function a1()
+{
+p1.className="xyz"
+}
+function a2()
+{
+p1.className="abc"
+}
+</script>
+Welcome to Home Page
+</a>
+<br><br>
+<a name = "about.html">
+<style>
+.abc { color:black;font-size:30 }
+.xyz { color:red;font-size:35 }
+</style>
+<p id=p1 class=abc onmouseover=a1() onmouseout=a2()> About </p>
+<script>
+function a1()
+{
+p1.className="xyz"
+}
+function a2()
+{
+p1.className="abc"
+}
+</script>Welcome to About Page
+</a><br><br>
+<a name = "register.html">
+<style>
+.abc { color:black;font-size:30 }
+.xyz { color:red;font-size:35 }
+</style>
+<p id=p1 class=abc onmouseover=a1() onmouseout=a2()> Registration </p>
+<script>
+function a1()
+{
+p1.className="xyz"
+}
+function a2()
+{
+p1.className="abc"
+}
+</script>
+<label for="start"></label>
+<br><br>
+<table border="0">
+<form name=f1 action=confirmation.html onsubmit="return xyz()">
+<tr><th colspan="2"> Registration form </th> </tr>
+<tr> <td> User Id </td> <td><input 
+required pattern="\w{1,20}"></td> </tr>
+<tr> <td> Name </td> <td> <input required pattern="[a-zA-Z ]{1,20}"> </td> </tr>
+<tr> <td> Password </td><td> <input type="password" id=password required></td></tr>
+
+<tr> <td>  Email Id</td> <td> <input required = email >  </td> </tr>
+<tr> <td> Contact </td> <td> <input required pattern="[0-9]{10,12}"> </td> </tr>
+
+<tr> <td> Address</td> <td> <input required></td> </tr>
+
+<tr> <td> Date of Birth</td> <td> <input required type="date" id="start" 
+name="trip-start"
+       min="2000-01-01" max="2010-12-31"></td> </tr>
+
+<tr> <td> Country</td> <td><select required> <option value = India> India </option> <option value = China> China </option> <option value = Russia> Russia 
+</option> <option value = Brazil> Brazil </option> 
+</select>
+</td> </tr>
+<tr> <td> </td> <td> <input type=submit value=Register /></td></tr>
+</form>
+</table>
+<br>
+<script>
+function xyz()
+{
+f=true
+a=password.value
+c=0
+if(a.match(/[A-Z]/))
+c=c+1
+if(a.match(/[a-z]/))
+c=c+1
+if(a.match(/[0-9]/))
+c=c+1
+if(a.match(/\W/))
+c=c+1
+if(a.length>7)
+c=c+1
+alert("Strong Password is Required to Register")
+if(c<5)
+f=false
+return f
+}
+</script>
+</a><br><br>
+<a name = "contact.html">
+<style>
+.abc { color:black;font-size:30 }
+.xyz { color:blue;font-size:35 }
+</style>
+<p id=p1 class=abc onmouseover=a1() onmouseout=a2()> Contact </p>
+<script>
+function a1()
+{
+p1.className="xyz"
+}
+function a2()
+{
+p1.className="abc"
+}
+</script>Welcome to Contact Page
+</a><br><br>
+<a name = "login.html">
+<style>
+.abc { color:black;font-size:30 }
+.xyz { color:red;font-size:35 }
+</style>
+<p id=p1 class=abc onmouseover=a1() onmouseout=a2()> Login </p>
+<script>
+function a1()
+{
+p1.className="xyz"
+}
+function a2()
+{
+p1.className="abc"
+}
+</script>
+<style>
+.red { color:red }
+</style>
+<form name=f1 action=show.html 
+onsubmit="return xyz()">
+<table border=0>
+<tr><td>User Id <td><input  id=userid /> <span id=s1 class=red></span>
+<tr><td>Password <td><input type=password  id=password /><span id=s2 
+class=red></span>
+<tr><td><td><input type=submit value=Login />
+</table>
+</form>
+<br>
+<span id=s3 class=red></span>
+<script>
+function xyz()
+{
+f=true
+a=userid.value
+b=password.value
+msg=""
+if(a.length==0)
+{
+msg = msg + "<br> Enter user id"; 
+s1.innerHTML="*"
+f=false
+}
+else
+{
+s1.innerHTML=""
+}
+if(b.length==0)
+{
+msg = msg + "<br> Enter Password";
+s2.innerHTML="*"
+f=false
+}
+else
+{
+s2.innerHTML=""
+}
+s3.innerHTML=msg
+return f
+}
+</script>
+</a><br>
+<a name = "show.html">
+<style>
+.abc { color:black;font-size:30 }
+.xyz { color:red;font-size:35 }
+</style>
+<p id=p1 class=abc onmouseover=a1() onmouseout=a2()> Show </p>
+<script>
+function a1()
+{
+p1.className="xyz"
+}
+function a2()
+{
+p1.className="abc"
+}
+</script>Welcome to Show Page
+</a>
